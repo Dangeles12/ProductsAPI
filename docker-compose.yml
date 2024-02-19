@@ -1,0 +1,19 @@
+version: "3.4"
+services:
+    api:
+        image: "dhimas12/products-proj:v1"
+        ports:
+          - "5001:80"
+        depends_on:
+          - db
+        environment: 
+          ASPNETCORE_ENVIRONMENT: Development
+
+    db:
+        image: "mcr.microsoft.com/mssql/server:2019-latest"
+        ports:
+          - "1433:1433"
+
+        environment:
+            SA_PASSWORD: "Testexec123"
+            ACCEPT_EULA: "Y"
