@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ProductsDbContext>(options =>
-    options.UseSqlServer("Server=localhost;Database=ProductsDb;User=sa;Password=Testexec123;TrustServerCertificate=True"
+    options.UseSqlServer("Server=db;Database=ProductsDb;User=sa;Password=Testexec123;TrustServerCertificate=True"
 ));
 builder.Services.AddInfrastructure();
 builder.Services.AddApplication();
